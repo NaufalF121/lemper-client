@@ -1,13 +1,16 @@
+
 import { Path } from "$env/static/private";
 import { error, redirect } from "@sveltejs/kit";
 
 
 
 export const load = async (event: any) => {
-  const token = event.cookies.get('token');
-    if (token) {
-        throw redirect(301, '/latihan');
+  const token = event.cookies.get('token', {path: '/'});
+  event.cookies.set('token',"", {path: '/'});
+    if (token != null) {
+        console.log('token : ', token);
     }
+    
 }
 
 export const actions = {
@@ -35,9 +38,12 @@ export const actions = {
         } else {
             const data = response.body ? response.body.toString() : '';
             event.cookies.set('token', responseData.token, {
-                maxAge: 60 * 60 * 24 * 7,
+                maxAge: 60,
                 path: '/',
                 secure: false,
+                sameSite: 'lax',
+                httpOnly: false
+                
             });
 
             throw redirect(301, '/latihan');
