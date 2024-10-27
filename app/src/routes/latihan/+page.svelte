@@ -18,7 +18,7 @@
                 <h1 class="text-main-fourtiary font-mono font-semibold text-xl">
                     Assignment 1
                 </h1>
-                <a href="/latihan/assignment1">
+                <a href="/latihan/A">
                     <button class="w-32 h-10 border-2 border-main-fourtiary text-main-fourtiary hover:bg-main-fourtiary hover:text-main-primary rounded-lg my-2">
                         Start
                     </button>
