@@ -1,6 +1,6 @@
 import { error, redirect } from '@sveltejs/kit';
 
-export const load = async (event: any) => {
+export const load = async (event:any) => {
 	console.log('Load function called');
     
 
