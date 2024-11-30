@@ -21,7 +21,7 @@ export const load = async (event: any) => {
 };
 
 export const actions = {
-	default: async (event: any) => {
+	login: async (event: any) => {
 		const formData = await event.request.formData();
 		const email = formData.get('username') as string;
 		const password = formData.get('password') as string;
@@ -42,6 +42,7 @@ export const actions = {
 
 		if (!response.ok) {
 			throw error(response.status, 'Failed to login');
+			
 		} else {
 			const data = response.body ? response.body.toString() : '';
 			event.cookies.set('token', responseData.token, {
