@@ -39,7 +39,7 @@ export const actions = {
 		});
 
 		const responseData = await response.json();
-
+		console.log('Response data:', responseData);
 		if (!response.ok) {
 			throw error(response.status, 'Failed to login');
 			

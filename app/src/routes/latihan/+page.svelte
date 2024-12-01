@@ -8,8 +8,8 @@
 </script>
 
 <main class="flex justify-center items-center h-screen">
-    <div class="w-full h-dvh bg-main-primary flex flex-col justify-center items-center">
-        <blockquote class="italic text-main-text w-96 text-center">
+    <div class="w-full h-dvh bg-colors-primary flex flex-col justify-center items-center">
+        <blockquote class="italic text-colors-text w-96 text-center">
             {" "}
             Programming is not about what you know, it’s about what you can figure
             out.
@@ -22,7 +22,7 @@
         </div>
 
         <button class="bg-negative py-2 px-5 rounded-md hover:border-2" on:click={handleLogout}>
-            <a href="/sign-out" class="text-main-primary">Logout</a>
+            <a href="/sign-out" class="text-colors-primary">Logout</a>
         </button>
     </div>
 </main>
