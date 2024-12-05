@@ -1,14 +1,13 @@
-import type { PageServerLoad } from './$types.ts';
-import { json } from '@sveltejs/kit';
+import type { PageLoad } from './$types.js';
 
 
 
 
-export const load: PageServerLoad = async (event:any) => {
+
+export const load: PageLoad = async (event:any) => {
     
     const response = await fetch(`http://localhost:5530/api/restricted/Problems/${event.params.problem}.md`);
     const data = await response.text();
-    console.log(data);
     return {content: data};
 
 };
