@@ -1,4 +1,7 @@
 import type { PageServerLoad } from './$types.ts';
+import { json } from '@sveltejs/kit';
+
+
 
 
 export const load: PageServerLoad = async (event:any) => {
@@ -9,3 +12,4 @@ export const load: PageServerLoad = async (event:any) => {
     return {content: data};
 
 };
+
